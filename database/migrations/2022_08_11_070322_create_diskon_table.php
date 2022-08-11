@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('diskon', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('jenisDiskon_id');
+            $table->date('tgl_mulai');
+            $table->date('tgl_berakhir');
             $table->timestamps();
         });
     }
